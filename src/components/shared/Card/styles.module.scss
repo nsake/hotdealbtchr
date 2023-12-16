@@ -1,0 +1,12 @@
+.card_icon {
+	& > svg {
+		color: var(--secondary-color);
+		fill: var(--secondary-color);
+
+		scale: (1.5);
+	}
+}
+
+.card_content {
+	font-family: var(--secondary-font);
+}

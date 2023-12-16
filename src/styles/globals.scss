@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+	--font-body: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--font-head: var(--font-body);
+	--font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+		monospace;
+	/* --font-icon: null; */
+
+	--primary-background: #ed3432;
+	--dark-background: #242424;
+	--light-background: #363636;
+
+	--primary-color: #fff;
+	--secondary-color: #ed3432;
+	--sub_text-color: rgba(255, 255, 255, 0.7);
+
+	--main-font: 'Exo 2', sans-serif;
+	--secondary-font: 'Inter', sans-serif;
+}
+
+* {
+	font-family: var(--main-font);
+
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.carousel-item {
+	padding-right: 40px;
+}
+image {
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	min-height: 100vh;
+
+	background-color: var(--dark-background);
+	color: var(--primary-color);
+
+	font-family: 'Exo 2', sans-serif;
+}
+
+*:focus {
+	outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 14px;
+
+	@media (max-width: 1499.98px) {
+		font-size: 16.5px;
+	}
+
+	@media (max-width: 1199.98px) {
+		font-size: 14px;
+	}
+
+	@media (min-width: 750px) and (max-width: 991.98px) {
+		font-size: 13px;
+	}
+	@media (min-width: 350px) and (max-width: 749.98px) {
+		font-size: 12px;
+	}
+	@media (min-width: 300px) and (max-width: 349.98px) {
+		font-size: 11px;
+	}
+	@media (max-width: 299.98px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 2000.98px) {
+		font-size: 22px;
+	}
+
+	::-webkit-scrollbar {
+		width: 0.1875rem; /* Width of vertical scrollbar */
+		height: 0.1875rem; /* Width of vertical scrollbar */
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #17171772;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: transparent; /* Color of the scrollbar handle */
+		border-radius: 0.3125rem; /* Rounded corners on the scrollbar handle */
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #616161; /* Color of the scrollbar handle on hover */
+	}
+}
+
+body {
+	-webkit-tap-highlight-color: transparent;
+
+	display: flex;
+	flex-direction: column;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+input,
+textarea {
+	&:not([type='checkbox']) {
+		appearance: none;
+		outline: none;
+		box-shadow: none;
+
+		border: none;
+		background-image: none;
+		background-color: transparent;
+	}
+
+	&::placeholder {
+		transition: 0.3s;
+	}
+	&:focus {
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+input {
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
+}
+
+button {
+	appearance: none;
+	transition: 0.3s;
+	cursor: pointer;
+	outline: none;
+	border-width: 0;
+	background-color: transparent;
+	padding: 0;
+	font-style: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+}
+
+b {
+	font-weight: bold;
+}
+
+a {
+	color: inherit;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+// select {
+// 	appearance: none;
+// }
+
+// ul,
+// ol {
+// 	margin: 0;
+// 	padding: 0;
+// 	list-style: none;
+// }
+
+html,
+body {
+	height: 100%;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+footer {
+	flex-shrink: 0;
+}
+
+.icon {
+	display: inline-flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		object-fit: contain;
+	}
+
+	svg,
+	img {
+		fill: inherit;
+		transition: 0.3s;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.recharts-default-tooltip {
+	background-color: #171717 !important;
+	border-color: #171717 !important;
+}
+
+body {
+	margin: 0;
+}
+
+// .container {
+// 	margin: 0 auto;
+// 	padding: 0 0.833rem;
+// 	width: 100%;
+// 	max-width: var(--max-width);
+
+// 	@media (max-width: 991.98px) {
+// 		max-width: 36.111rem;
+// 	}
+
+// 	@media (min-width: 750px) and (max-width: 991.98px) {
+// 		max-width: 24rem;
+// 	}
+// }
