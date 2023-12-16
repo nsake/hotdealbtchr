@@ -55,7 +55,8 @@
 }
 
 @media screen and (max-width: 550px) {
-	.hero {
+	.hero,
+	.hero_revert {
 		width: 100%;
 		flex-direction: column;
 

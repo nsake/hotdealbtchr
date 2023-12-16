@@ -25,3 +25,25 @@
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.logo_container {
+		width: fit-content;
+		& > div {
+			& .text {
+				font-size: xx-small;
+				text-wrap: nowrap;
+
+				&:first-child {
+					font-size: x-small;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 371px) {
+	.card_action_area {
+		width: 220px !important;
+	}
+}

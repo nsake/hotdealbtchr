@@ -10,17 +10,24 @@ export default function ActionAreaCard({ title, text, icon }: any) {
 			sx={{
 				backgroundColor: '#363636',
 				width: '400px',
-				height: '420px',
+				height: '400px',
 				maxWidth: 'unset',
-				borderRadius: '15px'
+				borderRadius: '15px',
+				overflow: 'visible'
 			}}
 		>
 			<CardActionArea
 				style={{
-					padding: '2.5rem',
+					padding: '2rem',
 					width: '400px',
-					height: '420px'
+					height: '400px',
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'flex-start',
+					alignItems: 'flex-start',
+					gap: '2rem'
 				}}
+				className={styles.card_action_area}
 			>
 				<div
 					style={{
@@ -30,8 +37,7 @@ export default function ActionAreaCard({ title, text, icon }: any) {
 						display: 'flex',
 						justifyContent: 'center',
 						alignItems: 'center',
-						borderRadius: '5px',
-						marginBottom: '3.5rem'
+						borderRadius: '5px'
 					}}
 					className={styles.card_icon}
 				>

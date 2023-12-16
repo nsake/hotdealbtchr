@@ -7,6 +7,25 @@
 	}
 }
 
+.card_action_area {
+	display: flex;
+
+	justify-items: flex-start;
+	align-self: flex-start;
+}
+
 .card_content {
 	font-family: var(--secondary-font);
+}
+
+@media screen and (max-width: 600px) {
+	.card_action_area {
+		width: 249px !important;
+	}
+}
+
+@media screen and (max-width: 371px) {
+	.card_action_area {
+		width: 220px !important;
+	}
 }

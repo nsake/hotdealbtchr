@@ -1,10 +1,35 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement, useEffect } from 'react';
 import styles from './styles.module.scss';
 
 import { NavLink } from 'react-router-dom';
 import Logo from 'components/shared/Logo';
 
 const Header = () => {
+	useEffect(() => {
+		try {
+			window.addEventListener('scroll', () => {
+				const verticalScrollPx = window.scrollY || window.pageYOffset;
+
+				const header = document?.querySelector('header');
+
+				if (header) {
+					if (verticalScrollPx > 100) {
+						header.style.backgroundColor = '#242424';
+						header.style.zIndex = '999';
+						header.style.boxShadow = 'rgb(0 0 0) 0px 2px 4px';
+					} else {
+						header.style.backgroundColor = 'unset';
+						header.style.zIndex = '999';
+						header.style.boxShadow = 'unset';
+					}
+				}
+				return;
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	}, []);
+
 	return (
 		<header className={styles.header}>
 			<Logo />
