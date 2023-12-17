@@ -1,0 +1,81 @@
+.hero_revert {
+	flex-direction: row-reverse;
+}
+
+.hero,
+.hero_revert {
+	margin: 3rem 0;
+	width: 100%;
+	display: flex;
+
+	justify-content: space-between;
+	align-items: flex-start;
+
+	& .hero_image {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		& > svg {
+			width: 450px;
+			height: 400px;
+		}
+	}
+}
+
+@media screen and (max-width: 1090px) {
+	.hero,
+	.hero_revert {
+		width: 100%;
+		flex-direction: column;
+
+		align-items: center;
+		justify-content: center;
+
+		& .hero_image {
+			align-self: center;
+			justify-content: center;
+			width: 500px;
+			height: 500px;
+
+			& > div {
+				width: 500px;
+				height: 340px;
+			}
+
+			& > svg {
+				width: 500px;
+				height: 340px;
+			}
+		}
+
+		justify-content: space-between;
+		gap: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.hero,
+	.hero_revert {
+		width: 100%;
+		flex-direction: column;
+
+		& .hero_image {
+			width: 280px;
+			height: 280px;
+
+			& > div {
+				width: 280px;
+				height: 220px;
+			}
+
+			& > svg {
+				width: 280px;
+				height: 220px;
+			}
+		}
+
+		justify-content: space-between;
+		gap: 5rem;
+	}
+}

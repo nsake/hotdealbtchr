@@ -2,7 +2,6 @@ import styles from './styles.module.scss';
 import Titled from 'components/Texts/Titled';
 
 import { CardContent, Typography } from '@mui/material';
-import { Slide } from 'react-awesome-reveal';
 import SearchPeople from 'sheets/icons/SearchPeople';
 
 const CloseHero = ({ texts }: any) => (

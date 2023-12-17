@@ -1,7 +1,7 @@
 import { FC, ReactElement, useEffect } from 'react';
 import styles from './styles.module.scss';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from 'components/shared/Logo';
 
 const Header = () => {
@@ -95,10 +95,20 @@ interface IHomeTemplate {
 }
 
 export const HomeTemplate: FC<IHomeTemplate> = ({ children }) => {
+	const location = useLocation();
+
 	return (
 		<>
-			<div className={styles.background_image_revealer} />
-			<div className={styles.background_image} />
+			<>
+				<div className={styles.background_image_revealer} />
+				<div
+					className={
+						!location.pathname.includes('candidates')
+							? styles.background_image
+							: styles.background_image_default
+					}
+				/>
+			</>
 
 			<Header />
 			<section className={styles.pageLayout}>{children}</section>
