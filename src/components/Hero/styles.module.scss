@@ -5,6 +5,8 @@
 	justify-content: space-between;
 	align-items: flex-start;
 
+	max-height: 350px;
+
 	& .hero_image {
 		width: 480px;
 		height: 480px;
@@ -47,6 +49,8 @@
 	.hero {
 		width: 100%;
 		flex-direction: column;
+
+		max-height: unset;
 
 		& .hero_image {
 			width: 480px;

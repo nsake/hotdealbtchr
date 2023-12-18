@@ -56,15 +56,6 @@ const Header = () => {
 const Footer = () => {
 	const telephone = '+380 63 484 93 17';
 	const email = 'hotdealbtchr@gmail.com';
-
-	const info = [
-		'Видання іншого програмного забезпечення',
-		'Консультування з питань інформатизації',
-		`Інша діяльність у сфері інформаційних технологій і комп'ютерних систем`,
-		`Оброблення даних, розміщення інформації на веб-вузлах і пов'язана з ними діяльність`,
-		`Надання інших інформаційних послуг, н.в.і.у.`
-	];
-
 	return (
 		<footer className={styles.footer}>
 			<Logo />
@@ -94,15 +85,6 @@ const Footer = () => {
 							<div style={{ textWrap: 'nowrap' }}>10:00 — 18:00 (пн-пт)</div>
 						</ul>
 					</div>
-				</div>
-
-				<div className={styles.info}>
-					Основні напрямки нашої компанії:
-					<ul>
-						{info?.map((item) => (
-							<li style={{ textWrap: 'nowrap' }}>{item}</li>
-						))}
-					</ul>
 				</div>
 			</div>
 		</footer>

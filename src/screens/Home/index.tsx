@@ -21,6 +21,7 @@ import Diversity3Icon from '@mui/icons-material/Diversity3';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import CardCarousel from 'components/CardCarousel';
 import OpenComputer from 'sheets/icons/OpenComputer';
+import MainRoads from 'sheets/icons/MainRoads';
 
 export const Home = () => {
 	const carouselIcon = [
@@ -91,9 +92,20 @@ export const Home = () => {
 					text: 'HOT DEAL BTC — провідна рекрутингова агенція, що спеціалізується на пошуку та підборі висококваліфікованих спеціалістів для різноманітних галузей та секторів бізнесу.'
 				}}
 			/>
+			<About
+				revert
+				title='Основні напрямки нашої компанії:'
+				texts={[
+					'Видання іншого програмного забезпечення',
+					'Консультування з питань інформатизації',
+					`Інша діяльність у сфері інформаційних технологій і комп'ютерних систем`,
+					`Оброблення даних, розміщення інформації на веб-вузлах і пов'язана з ними діяльність`,
+					`Надання інших інформаційних послуг, н.в.і.у.`
+				]}
+				icon={<MainRoads />}
+			/>
 
 			<IconCarousel items={carouselIcon} />
-
 			<About
 				title='Про Нас'
 				texts={[
@@ -103,7 +115,6 @@ export const Home = () => {
 				]}
 				icon={<Interview />}
 			/>
-
 			<About
 				revert
 				texts={[
@@ -113,16 +124,13 @@ export const Home = () => {
 				]}
 				icon={<AbsorbKnowledge />}
 			/>
-
 			<About
 				title='Процес підбору кандидата'
 				texts={[
 					'Процес підбору фахівця в рекрутинговій агенції HOT DEAL BTC ґрунтується на систематичному й уважному підході, який гарантує знаходження оптимального кандидата для кожної вакансії. Ось загальний огляд нашого процесу підбору фахівця:'
 				]}
 			/>
-
 			<CardCarousel>{cardCarouselList.map((item) => item)}</CardCarousel>
-
 			<CloseHero
 				texts={[
 					{
