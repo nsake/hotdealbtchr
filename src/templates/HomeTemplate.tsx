@@ -56,31 +56,52 @@ const Header = () => {
 const Footer = () => {
 	const telephone = '+380 63 484 93 17';
 	const email = 'hotdealbtchr@gmail.com';
+
+	const info = [
+		'Видання іншого програмного забезпечення',
+		'Консультування з питань інформатизації',
+		`Інша діяльність у сфері інформаційних технологій і комп'ютерних систем`,
+		`Оброблення даних, розміщення інформації на веб-вузлах і пов'язана з ними діяльність`,
+		`Надання інших інформаційних послуг, н.в.і.у.`
+	];
+
 	return (
 		<footer className={styles.footer}>
 			<Logo />
-			<div className={styles.contacts_container}>
-				<div className={styles.list}>
-					Наші контакти
-					<ul>
-						<a href={`tel:${telephone}`}>{telephone}</a>
-						<a href={`mailto:${email}`}>{email}</a>
-						<a
-							href={
-								'https://www.google.com/maps/@50.4588278,30.4785363,11.03z?entry=ttu'
-							}
-							target='_blank'
-							rel='noreferrer'
-						>
-							м.Київ
-						</a>
-					</ul>
+
+			<div className={styles.common_info}>
+				<div className={styles.contacts_container}>
+					<div className={styles.list}>
+						Наші контакти
+						<ul>
+							<a href={`tel:${telephone}`}>{telephone}</a>
+							<a href={`mailto:${email}`}>{email}</a>
+							<a
+								href={
+									'https://www.google.com/maps/@50.4588278,30.4785363,11.03z?entry=ttu'
+								}
+								target='_blank'
+								rel='noreferrer'
+							>
+								м.Київ/м.Львів
+							</a>
+						</ul>
+					</div>
+
+					<div className={styles.list}>
+						Графік Роботи
+						<ul>
+							<div style={{ textWrap: 'nowrap' }}>10:00 — 18:00 (пн-пт)</div>
+						</ul>
+					</div>
 				</div>
 
-				<div className={styles.list}>
-					Графік Роботи
+				<div className={styles.info}>
+					Основні напрямки нашої компанії:
 					<ul>
-						<div style={{ textWrap: 'nowrap' }}>10:00 — 18:00 (пн-пт)</div>
+						{info?.map((item) => (
+							<li style={{ textWrap: 'nowrap' }}>{item}</li>
+						))}
 					</ul>
 				</div>
 			</div>

@@ -82,7 +82,7 @@
 	z-index: 3;
 
 	width: 100vw;
-	height: 4.5rem;
+	min-height: 4.5rem;
 
 	padding: 0.5rem 10vw;
 
@@ -91,6 +91,21 @@
 	justify-content: space-between;
 
 	gap: 2.5rem;
+
+	.common_info {
+		gap: 2.5rem;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.info {
+			max-width: 700px;
+			width: 100%;
+			* {
+				text-wrap: wrap !important;
+			}
+		}
+	}
 
 	& .contacts_container {
 		display: flex;
@@ -117,6 +132,20 @@
 	}
 }
 
+@media screen and (max-width: 1300px) {
+	.contacts_container {
+		flex: 1 1 0;
+		.common_info {
+			.info {
+				width: 400px;
+				& * {
+					text-wrap: wrap !important;
+				}
+			}
+			// flex-direction: column;
+		}
+	}
+}
 @media screen and (max-width: 990px) {
 	.footer {
 		flex-direction: column;

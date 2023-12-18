@@ -20,7 +20,7 @@ function ResponsiveCarousel({ data }: any) {
 	const ref = React.useRef<any>();
 
 	return (
-		<div style={{ width: '100%', minHeight: '450px', position: 'relative' }}>
+		<div style={{ width: '100%', position: 'relative' }}>
 			<ResponsiveContainer
 				carouselRef={ref}
 				render={(width, carouselRef) => {
