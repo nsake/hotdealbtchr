@@ -24,6 +24,8 @@
 
 	gap: 1rem;
 
+	padding-bottom: 2.5rem;
+
 	.background {
 		z-index: -1;
 		position: absolute;
@@ -132,9 +134,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+	.titled_container {
+		width: 100% !important;
+	}
 	.close_hero_texts {
 		align-self: center !important;
-		width: 50% !important;
+		width: 100% !important;
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 3rem !important;

@@ -1,8 +1,9 @@
-import { FC, ReactElement, useEffect } from 'react';
+import { FC, ReactElement, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from 'components/shared/Logo';
+import useScrollToTop from 'hooks/useScrollToTop';
 
 const Header = () => {
 	useEffect(() => {
@@ -30,24 +31,69 @@ const Header = () => {
 		}
 	}, []);
 
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const handleMenuToggle = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
+	const scrollToSection = (id: string, offset: number) => {
+		const element = document.getElementById(id);
+		if (element) {
+			window.scrollTo({
+				top: element.offsetTop - offset,
+				behavior: 'smooth'
+			});
+		}
+	};
+
+	const handleNavLinkClick = (id: string) => {
+		setIsMenuOpen(false);
+		scrollToSection(id, 0);
+	};
+
 	return (
 		<header className={styles.header}>
 			<Logo />
-
-			<div className={styles.links}>
-				<NavLink
-					to='employers'
-					className={(navData) => (navData.isActive ? styles.active_link : '')}
+			<div className={styles.navContainer}>
+				<button className={styles.burgerButton} onClick={handleMenuToggle}>
+					☰
+				</button>
+				<div
+					className={`${styles.links} ${styles.menu} ${
+						isMenuOpen ? styles.showMenu : ''
+					}`}
 				>
-					Роботодавцям
-				</NavLink>
-
-				<NavLink
-					to='candidates'
-					className={(navData) => (navData.isActive ? styles.active_link : '')}
-				>
-					Кандидатам
-				</NavLink>
+					<button className={styles.closeButton} onClick={handleMenuToggle}>
+						×
+					</button>
+					<NavLink to='/#about' onClick={() => handleNavLinkClick('about')}>
+						About us
+					</NavLink>
+					<NavLink to='/#culture' onClick={() => handleNavLinkClick('culture')}>
+						Our Culture
+					</NavLink>
+					<NavLink
+						to='/job'
+						className={({ isActive }) => (isActive ? styles.active_link : '')}
+						onClick={() => setIsMenuOpen(false)}
+					>
+						Job
+					</NavLink>
+					<NavLink
+						to='/reviews'
+						className={({ isActive }) => (isActive ? styles.active_link : '')}
+						onClick={() => setIsMenuOpen(false)}
+					>
+						Reviews
+					</NavLink>
+					<NavLink
+						to='/#contacts'
+						onClick={() => handleNavLinkClick('contacts')}
+					>
+						Contacts
+					</NavLink>
+				</div>
 			</div>
 		</header>
 	);
@@ -60,10 +106,10 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<Logo />
 
-			<div className={styles.common_info}>
+			<div className={styles.common_info} id='contacts'>
 				<div className={styles.contacts_container}>
 					<div className={styles.list}>
-						Наші контакти
+						Our Contacts
 						<ul>
 							<a href={`tel:${telephone}`}>{telephone}</a>
 							<a href={`mailto:${email}`}>{email}</a>
@@ -74,15 +120,15 @@ const Footer = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								м.Київ/м.Львів
+								Kyiv/Lviv
 							</a>
 						</ul>
 					</div>
 
 					<div className={styles.list}>
-						Графік Роботи
+						Working hours
 						<ul>
-							<div style={{ textWrap: 'nowrap' }}>10:00 — 18:00 (пн-пт)</div>
+							<div style={{ textWrap: 'nowrap' }}>10:00 - 18:00 (Mon-Fri)</div>
 						</ul>
 					</div>
 				</div>
@@ -99,6 +145,7 @@ interface IHomeTemplate {
 
 export const HomeTemplate: FC<IHomeTemplate> = ({ children }) => {
 	const location = useLocation();
+	useScrollToTop();
 
 	return (
 		<>
@@ -106,7 +153,7 @@ export const HomeTemplate: FC<IHomeTemplate> = ({ children }) => {
 				<div className={styles.background_image_revealer} />
 				<div
 					className={
-						!location.pathname.includes('candidates')
+						!location.pathname.includes('job')
 							? styles.background_image
 							: styles.background_image_default
 					}

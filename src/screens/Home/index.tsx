@@ -3,17 +3,13 @@ import IconCarousel from 'components/IconCarousel';
 
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import DescriptionIcon from '@mui/icons-material/Description';
 import About from 'components/About';
 import Interview from 'sheets/icons/Interview';
 import AbsorbKnowledge from 'sheets/icons/AbsorbKnowledge';
 import ActionAreaCard from 'components/shared/Card';
-import ChecklistIcon from '@mui/icons-material/Checklist';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import StarsIcon from '@mui/icons-material/Stars';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CloseHero from 'components/CloseHero';
 
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
@@ -22,63 +18,47 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import CardCarousel from 'components/CardCarousel';
 import OpenComputer from 'sheets/icons/OpenComputer';
 import MainRoads from 'sheets/icons/MainRoads';
+import { InsertEmoticon, Public } from '@mui/icons-material';
+import CultureSection from 'components/CultureSection';
 
 export const Home = () => {
 	const carouselIcon = [
 		{
-			text: '9 років нa ринку праці',
+			text: '4 years on the market',
 			icon: <HandshakeIcon />
 		},
 		{
-			text: '400 + задоволених клієнтів',
+			text: '50,000+ satisfied clients',
 			icon: <AutoAwesomeIcon />
 		},
 		{
-			text: 'Досвід співпраці з ТОП - компаніями України',
-
-			icon: <EmojiEventsIcon />
+			text: '500+ happy employees',
+			icon: <InsertEmoticon />
 		},
 		{
-			text: '87 % кандидатів проходять випробовувальний термін і залишаються на роботі',
-			icon: <DescriptionIcon />
+			text: 'Branches across Europe',
+			icon: <Public />
 		}
 	];
 
 	const cardCarouselList = [
 		<ActionAreaCard
-			icon={<ChecklistIcon />}
-			title={'Збирання побажань'}
-			text={
-				'Наша команда ретельно спілкується з клієнтом, щоб повністю зрозуміти їхні потреби та вимоги до вакансії. Ми обговорюємо не тільки технічні навички, а й культурні аспекти, які важливі для успішної інтеграції кандидата в компанію.'
-			}
-		/>,
-		<ActionAreaCard
 			icon={<RemoveRedEyeIcon />}
-			title={'Перегляд резюме та попередня співбесіда'}
+			title={'Resume Review and Preliminary Interview'}
 			text={
-				'Ми аналізуємо резюме та проводимо попередні співбесіди з потенційними кандидатами. На цьому етапі ми оцінюємо їхні професійні навички, досвід роботи та відповідність вимогам вакансії.'
+				'We analyze resumes and conduct preliminary interviews with potential candidates. At this stage, we assess their professional skills, work experience, and alignment with the requirements of the position.'
 			}
 		/>,
 		<ActionAreaCard
 			icon={<StarsIcon />}
-			title={'Тестування та оцінювання'}
-			text={
-				'За необхідності ми проводимо спеціальні тести й оцінювання, щоб більш детально оцінити технічні навички та кваліфікацію кандидата. Це може включати технічні завдання, ассессмент або інші методи оцінки, що залежать від вимог вакансії.'
-			}
+			title={'Testing and Evaluation'}
+			text={`If necessary, we conduct specialized tests and evaluations to gain a more detailed assessment of a candidate's technical skills and qualifications. This may include technical tasks, assessments, or other evaluation methods depending on the requirements of the position.`}
 		/>,
 		<ActionAreaCard
 			icon={<RecordVoiceOverIcon />}
-			title={'Співбесіда з клієнтом'}
-			text={
-				'Після проходження попереднього відбору, ми організуємо співбесіду кандидатів з клієнтом. Ми допомагаємо встановити зустріч, підготувати питання і забезпечити ефективну взаємодію між сторонами.'
-			}
-		/>,
-		<ActionAreaCard
-			icon={<AccessTimeIcon />}
-			title={'Підтримка в процесі найму'}
-			text={
-				'Після вибору відповідного кандидата ми підтримуємо клієнта в процесі найму, надаючи рекомендації щодо умов праці.'
-			}
+			title={'Interview'}
+			text={`After the preliminary selection, we organize an interview between the candidate, the recruiter, and the future manager.
+Following the interview, we review feedback from all parties involved and make a final decision. If the candidate is selected, we proceed with the offer and onboarding process, ensuring a smooth transition into their new role.`}
 		/>
 	];
 
@@ -87,47 +67,75 @@ export const Home = () => {
 			<Hero
 				icon={<OpenComputer />}
 				{...{
-					title: 'HOT DEAL BTC',
-					subtitle: 'Ваш партнер у пошуку та підборі кваліфікованих фахівців',
-					text: 'HOT DEAL BTC — провідна рекрутингова агенція, що спеціалізується на пошуку та підборі висококваліфікованих спеціалістів для різноманітних галузей та секторів бізнесу.'
+					title: 'Hot Line BTS',
+					subtitle: 'Your Trusted Partner in Cutting-Edge Technology',
+					text: 'Hot Line BTS is a company with four years of experience, confidently establishing itself in the European market by delivering top-tier solutions in the field of computer programming and information technology. Our mission is to equip businesses and organizations with innovative tools that help them achieve new levels of efficiency and competitiveness.'
 				}}
 			/>
+
 			<About
 				revert
-				title='Основні напрямки нашої компанії:'
+				title='Our Services:'
 				texts={[
-					'Видання іншого програмного забезпечення',
-					'Консультування з питань інформатизації',
-					`Інша діяльність у сфері інформаційних технологій і комп'ютерних систем`,
-					`Оброблення даних, розміщення інформації на веб-вузлах і пов'язана з ними діяльність`,
-					`Надання інших інформаційних послуг, н.в.і.у.`
+					`<p>
+				<strong>Computer Programming:</strong>
+				We specialize in developing high-quality software that meets the highest
+				industry standards and the unique needs of our clients.
+			</p>`,
+					`<p>
+				<strong>Software Publishing:</strong>
+				We create and publish software that simplifies users’ lives and enhances
+				business productivity.
+			</p>`,
+					`<p>
+				<strong>IT Consulting:</strong> Our experts provide professional
+				consulting services in the field of informatization, helping
+				organizations optimize their IT processes and infrastructure.
+			</p>`,
+					`<p>
+				<strong>Other IT Activities:</strong>
+				We offer a wide range of services in information technology, including
+				data processing, web hosting, and other information services.
+			</p>`,
+					`<p>
+				<strong>Call Center Operations:</strong> Our call centers provide
+				high-quality customer support and service, contributing to increased
+				customer satisfaction and loyalty.
+			</p>`,
+					`<p>
+				Hot Line BTS is a team of professionals dedicated to making information
+			technology accessible and beneficial for every business. We will help you
+			build a solid foundation for your digital future.
+			</p>`
 				]}
 				icon={<MainRoads />}
 			/>
-
 			<IconCarousel items={carouselIcon} />
+			<div id='about'></div>
 			<About
-				title='Про Нас'
+				title='About Us'
 				texts={[
-					'Ми пропонуємо інноваційні рішення в галузі рекрутингу, які допомагають нашим клієнтам залучати і наймати найталановитіших кандидатів.',
-					'Наша команда складається з досвідчених і відданих професіоналів, які ретельно аналізують потреби кожного клієнта і розробляють індивідуальні стратегії пошуку. Ми ретельно перевіряємо кожного кандидата, щоб переконатися в їхній відповідності вимогам і якості, яку ми прагнемо надати нашим клієнтам.',
-					'HOT DEAL BTC пропонує широкий спектр послуг, включно з рекрутингом на постійні та тимчасові позиції, пошуком керівних кадрів, консультаціями щодо стратегій залучення талантів і багато іншого.'
+					'We offer innovative recruitment solutions that help our clients attract and hire the most talented candidates.',
+					'Our team consists of experienced and dedicated professionals who thoroughly analyze each client’s needs and develop customized search strategies. We carefully vet each candidate to ensure they meet the requirements and quality we aim to provide to our clients.',
+					'HOT DEAL BTC offers a wide range of services, including recruitment for permanent and temporary positions, executive search, talent acquisition strategy consulting, and much more.'
 				]}
 				icon={<Interview />}
 			/>
 			<About
 				revert
 				texts={[
-					'Ми приділяємо особливу увагу розумінню бізнес-потреб клієнта і прагнемо знайти ідеальну відповідність між вимогами вакансії та навичками кандидатів.',
-					'Співпраця з HOT DEAL BTC дає можливість вашій компанії зосередитися на основній діяльності, дозволяючи нам піклуватися про пошук найкращих кандидатів для вашого зростання та розвитку.',
-					'Зверніться до нас уже сьогодні та довірте свої потреби в наймі професіоналам, щоб побудувати сильну команду та досягти нових висот у вашому бізнесі.'
+					'We pay special attention to understanding the client’s business needs and strive to find the perfect match between job requirements and candidates’ skills.',
+					'Partnering with HOT DEAL BTC allows your company to focus on core activities while we take care of finding the best candidates for your growth and development.',
+					'Contact us today and trust your hiring needs to professionals to build a strong team and reach new heights in your business.'
 				]}
 				icon={<AbsorbKnowledge />}
 			/>
+
+			<CultureSection />
 			<About
-				title='Процес підбору кандидата'
+				title='The hiring process in our company'
 				texts={[
-					'Процес підбору фахівця в рекрутинговій агенції HOT DEAL BTC ґрунтується на систематичному й уважному підході, який гарантує знаходження оптимального кандидата для кожної вакансії. Ось загальний огляд нашого процесу підбору фахівця:'
+					'The specialist selection process at HOT DEAL BTC is based on a systematic and attentive approach that ensures finding the optimal candidate for each of our vacancies. Here is an overview of our candidate selection stages:'
 				]}
 			/>
 			<CardCarousel>{cardCarouselList.map((item) => item)}</CardCarousel>
@@ -135,21 +143,18 @@ export const Home = () => {
 				texts={[
 					{
 						icon: <HomeRepairServiceIcon />,
-						text: `Наші рекрутери мають спеціалізацію та експертизу в області найму
-							співробітників. Вони знають ринок праці, мають доступ до
-							рекрутингових інструментів та мережі можуть ефективно шукати та
-							привертати таланти.`,
-						title: 'Спеціалізація в наймі'
+						text: `Our recruiters have specialization and expertise in the field of employee recruitment. They understand the job market, have access to recruitment tools and networks, and can effectively search for and attract talent.`,
+						title: 'Specialization in Recruitment'
 					},
 					{
 						icon: <Diversity3Icon />,
-						text: `Ми займаємось всім процесом найму, починаючи з пошуку кандидатів і закінчуючи підготовкою документів для прийому на роботу. Ми спрямовані на пошук та відбір кращих кандидатів, тим самим збільшуючи ефективність процесу найму та знижуючи час, необхідний для заповнення вакансій.`,
-						title: 'Ефективність процесу найму'
+						text: `We handle the entire recruitment process, from candidate search to preparing documents for hiring. We focus on finding and selecting the best candidates, thereby increasing the efficiency of the hiring process and reducing the time needed to fill positions.`,
+						title: 'Recruitment Process Efficiency'
 					},
 					{
 						icon: <StorefrontIcon />,
-						text: `Наші рекрутери знають все про ринок праці, включаючи тренди в області зайнятості, заробітну плату, вимоги до кандидатів тощо. Це дозволяє нам знаходити кандидатів з потрібними навичками і талантами, а також пропонувати конкурентоспроможні умови для залучення талантів.`,
-						title: 'Спеціалізовані знання ринку праці'
+						text: `Our recruiters know everything about the job market, including employment trends, salary expectations, candidate requirements, and more. This allows us to find candidates with the right skills and talents and offer competitive conditions to attract them.`,
+						title: 'Specialized Market Knowledge'
 					}
 				]}
 			/>
