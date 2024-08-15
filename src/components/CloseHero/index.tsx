@@ -12,8 +12,7 @@ const CloseHero = ({ texts }: any) => (
 			<Titled
 				{...{
 					title: 'HOT DEAL BTC',
-
-					text: 'HOT DEAL BTC — провідна рекрутингова агенція, що спеціалізується на пошуку та підборі висококваліфікованих спеціалістів для різноманітних галузей та секторів бізнесу.'
+					text: 'HOT DEAL BTC is a leading recruitment agency specializing in finding and selecting highly qualified professionals for various industries and business sectors.'
 				}}
 			/>
 

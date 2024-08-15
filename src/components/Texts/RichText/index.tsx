@@ -16,9 +16,11 @@ const RichText = ({ subtitle, texts, title }: any) => (
 		)}
 
 		{texts?.map((text: string) => (
-			<Typography variant='inherit' component='span'>
-				{text}
-			</Typography>
+			<Typography
+				variant='inherit'
+				component='span'
+				dangerouslySetInnerHTML={{ __html: text }}
+			/>
 		))}
 	</section>
 );

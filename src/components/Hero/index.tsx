@@ -13,10 +13,12 @@ const Hero = ({ icon, hideBackgroundImage, ...rest }: any) => (
 			duration={1000}
 			style={{ margin: '0 auto' }}
 		>
-			<div className={styles.hero_image}>
-				{icon}
-				{!hideBackgroundImage && <div />}
-			</div>
+			{icon && (
+				<div className={styles.hero_image}>
+					{icon}
+					{!hideBackgroundImage && <div />}
+				</div>
+			)}
 		</Slide>
 	</section>
 );

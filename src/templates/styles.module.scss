@@ -51,7 +51,7 @@
 }
 
 .header {
-	z-index: 3;
+	z-index: 100;
 
 	transition: all 0.3s ease;
 	top: 0;
@@ -157,5 +157,89 @@
 		& .contacts_container {
 			flex-direction: column;
 		}
+	}
+}
+
+.navContainer {
+	position: relative;
+}
+
+.burgerButton {
+	display: none;
+	background: transparent;
+	border: none;
+	font-size: 2.5rem;
+	cursor: pointer;
+	margin-left: auto;
+	color: var(--color-white);
+	// Add additional styles for the burger button if needed
+}
+@media (min-width: 992px) {
+	.closeButton {
+		display: none;
+	}
+}
+@media (max-width: 991.98px) {
+	.burgerButton {
+		display: block; // Show burger button on mobile
+	}
+	.navContainer {
+		margin-left: auto;
+	}
+
+	.menu {
+		position: fixed;
+		top: 0;
+		right: -15.625rem; // Hidden by default
+		width: 15.625rem;
+		height: 100vh;
+		background: #333; // Background color of the menu
+		box-shadow: -0.125rem 0 0.3125rem rgba(0, 0, 0, 0.3);
+		transition: right 0.3s ease-in-out;
+		padding: 1.25rem;
+		z-index: 1000; // Ensure menu is above other content
+	}
+
+	.showMenu {
+		right: 0; // Slide in when menu is open
+	}
+
+	.closeButton {
+		background: transparent;
+		border: none;
+		font-size: 2rem;
+		color: #fff; // Close button color
+		cursor: pointer;
+		position: absolute;
+		top: 0rem;
+		right: 1rem;
+		// Add additional styles for the close button if needed
+	}
+
+	.links {
+		display: flex;
+		flex-direction: column;
+
+		gap: 1rem !important;
+	}
+
+	.links a {
+		color: #fff; // Link color
+		text-decoration: none;
+		padding: 0.625rem 0;
+		font-size: 1.5rem !important;
+		transition: color 0.3s ease;
+	}
+
+	.links a:hover {
+		color: #ddd; // Hover color
+	}
+
+	.active_link {
+		font-weight: bold;
+	}
+
+	.menu a {
+		font-size: 1rem;
 	}
 }

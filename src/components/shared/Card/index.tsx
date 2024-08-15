@@ -29,20 +29,23 @@ export default function ActionAreaCard({ title, text, icon }: any) {
 				}}
 				className={styles.card_action_area}
 			>
-				<div
-					style={{
-						background: '#242424',
-						width: '50px',
-						height: '50px',
-						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						borderRadius: '5px'
-					}}
-					className={styles.card_icon}
-				>
-					{icon}
-				</div>
+				{icon && (
+					<div
+						style={{
+							background: '#242424',
+							width: '50px',
+							height: '50px',
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							borderRadius: '5px'
+						}}
+						className={styles.card_icon}
+					>
+						{icon}
+					</div>
+				)}
+
 				<CardContent style={{ padding: 0 }} className={styles.card_content}>
 					<Typography
 						sx={{ color: 'white' }}
