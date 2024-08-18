@@ -1,8 +1,10 @@
 import React from 'react';
 import Hero from 'components/Hero';
 import { TextField, Button, Container, Grid, Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export const Request = () => {
+	const { t } = useTranslation();
 	return (
 		<section>
 			<Hero hideBackgroundImage title='Apply now' />
@@ -13,7 +15,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Full name'
+									label={t('full_name')}
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
 									sx={{
@@ -35,7 +37,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Date of birth'
+									label={t('date_of_birth')}
 									type='date'
 									InputLabelProps={{
 										shrink: true,
@@ -61,7 +63,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Current location'
+									label={t('current_location')}
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
 									sx={{
@@ -83,7 +85,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Contact number'
+									label={t('contact_number')}
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
 									sx={{
@@ -105,7 +107,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Email'
+									label={t('email')}
 									type='email'
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
@@ -128,7 +130,7 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label='Desired position'
+									label={t('desired_position')}
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
 									sx={{
@@ -150,7 +152,7 @@ export const Request = () => {
 							<Grid item xs={12}>
 								<TextField
 									fullWidth
-									label='Work experience'
+									label={t('work_experience')}
 									multiline
 									rows={4}
 									variant='outlined'
@@ -174,7 +176,7 @@ export const Request = () => {
 							<Grid item xs={12}>
 								<TextField
 									fullWidth
-									label='Salary expectations'
+									label={t('salary_expectations')}
 									variant='outlined'
 									InputLabelProps={{ style: { color: 'white' } }}
 									sx={{
@@ -196,7 +198,7 @@ export const Request = () => {
 							<Grid item xs={12}>
 								<TextField
 									fullWidth
-									label='Cover letter'
+									label={t('cover_letter')}
 									multiline
 									rows={6}
 									variant='outlined'
@@ -225,7 +227,7 @@ export const Request = () => {
 									type='submit'
 									sx={{ backgroundColor: '#ed3432', color: 'white' }}
 								>
-									Submit
+									{t('submit')}
 								</Button>
 							</Grid>
 						</Grid>

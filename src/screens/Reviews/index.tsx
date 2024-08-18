@@ -1,40 +1,43 @@
 import CardCarousel from 'components/CardCarousel';
 import Hero from 'components/Hero';
 import ActionAreaCard from 'components/shared/Card';
+import { useTranslation } from 'react-i18next';
 
 export const Reviews = () => {
+	const { t } = useTranslation();
+
 	const cardCarouselList = [
 		<ActionAreaCard
-			title={'Michael Johnson:'}
-			text={`"Working with Hot Line BTS has been a game-changer for our company. Their dedication to excellence and attention to detail are unmatched. We couldn’t be happier with the results!"`}
+			title={t('michael_johnson')}
+			text={t('working_with_hot_line_bts_has_been_a_game')}
 		/>,
 		<ActionAreaCard
-			title={'Clara Martinez:'}
-			text={`"Hot Line BTS exceeded our expectations with their innovative software solutions and exceptional support. Their team is reliable and always goes above and beyond."`}
+			title={t('clara_martinez')}
+			text={t('hot_line_bts_exceeded_our_expectations_with')}
 		/>,
 		<ActionAreaCard
-			title={`Liam O'Connor:`}
-			text={`"The expertise and professionalism of Hot Line BTS have greatly enhanced our IT infrastructure. Their tailored solutions have significantly improved our operational efficiency."`}
+			title={t('liam_oconnor')}
+			text={t('the_expertise_and_professionalism_of_hot_line')}
 		/>,
 		<ActionAreaCard
-			title={`Sophia Wang:`}
-			text={`"Hot Line BTS has been a fantastic partner in our digital transformation journey. Their commitment to delivering high-quality results and their proactive approach are truly commendable."`}
+			title={t('sophia_wang')}
+			text={t('hot_line_bts_has_been_a_fantastic_partner_in_our_')}
 		/>,
 		<ActionAreaCard
-			title={`Daniel Smith:`}
-			text={`"We’ve partnered with Hot Line BTS for several projects, and their performance has always been stellar. Their ability to adapt and innovate makes them an invaluable asset to our business."`}
+			title={t('daniel_smith')}
+			text={t('weve_partnered_with_hot_line_bts_for_several')}
 		/>,
 		<ActionAreaCard
-			title={`Olivia Brown`}
-			text={`"The Hot Line BTS team is incredibly skilled and easy to work with. Their solutions are effective, and their support is second to none. We highly value their partnership."`}
+			title={t('olivia_brown')}
+			text={t('the_hot_line_bts_team_is_incredibly_skilled_and')}
 		/>,
 		<ActionAreaCard
-			title={`Lucas White:`}
-			text={`"Hot Line BTS has consistently provided us with top-tier IT solutions. Their professionalism and dedication to client satisfaction make them stand out in the industry."`}
+			title={t('lucas_white')}
+			text={t('hot_line_bts_has_consistently_provided_us_with')}
 		/>,
 		<ActionAreaCard
-			title={`Ava Green:`}
-			text={`"From initial consultation to implementation, Hot Line BTS has been exceptional. Their deep understanding of our needs and swift problem-solving abilities have made a huge difference for us."`}
+			title={t('ava_green')}
+			text={t('from_initial_consultation_to_implementation_hot_line_bts_h')}
 		/>
 	];
 

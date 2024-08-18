@@ -3,31 +3,32 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import StarsIcon from '@mui/icons-material/Stars';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import CardCarousel from 'components/CardCarousel';
-import Treasure from 'sheets/icons/Treasure';
+import heroImage from 'sheets/images/depositphotos_327755014-stock-photo-smiling-multicultural-businesswomen-businessmen-looking.jpg';
+import positionsImage from 'sheets/images/coworkers-having-a-work-meeting-at-the-office_23-2148985456.jpg';
 import Hero from 'components/Hero';
 import AboutList from 'components/AboutList';
 import Analyze from 'sheets/icons/Analyze';
 import { Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export const Candidates = () => {
+	const { t } = useTranslation();
+
 	const cardCarouselList = [
 		<ActionAreaCard
 			icon={<RemoveRedEyeIcon />}
-			title={'Resume Review and Preliminary Interview'}
-			text={
-				'We analyze resumes and conduct preliminary interviews with potential candidates. At this stage, we assess their professional skills, work experience, and alignment with the requirements of the position.'
-			}
+			title={t('resume_review_and_preliminary_interview-0')}
+			text={t('we_analyze_resumes_and_conduct_preliminary')}
 		/>,
 		<ActionAreaCard
 			icon={<StarsIcon />}
-			title={'Testing and Evaluation'}
-			text={`If necessary, we conduct specialized tests and evaluations to gain a more detailed assessment of a candidate's technical skills and qualifications. This may include technical tasks, assessments, or other evaluation methods depending on the requirements of the position.`}
+			title={t('testing_and_evaluation')}
+			text={t('if_necessary_we_conduct_specialized_tests_and_evaluations')}
 		/>,
 		<ActionAreaCard
 			icon={<RecordVoiceOverIcon />}
-			title={'Interview'}
-			text={`After the preliminary selection, we organize an interview between the candidate, the recruiter, and the future manager.
-  Following the interview, we review feedback from all parties involved and make a final decision. If the candidate is selected, we proceed with the offer and onboarding process, ensuring a smooth transition into their new role.`}
+			title={t('interview')}
+			text={t('after_the_preliminary_selection_we_organize')}
 		/>
 	];
 
@@ -35,28 +36,28 @@ export const Candidates = () => {
 		<section>
 			<Hero
 				hideBackgroundImage
-				icon={<Treasure />}
+				icon={<img src={heroImage} alt='' />}
 				{...{
-					title: 'The hiring process in our company',
-					text: 'The specialist selection process at HOT DEAL BTC is based on a systematic and attentive approach that ensures finding the optimal candidate for each of our vacancies. Here is an overview of our candidate selection stages:'
+					title: t('the_hiring_process_in_our_company'),
+					text: t('the_specialist_selection_process_at_hot_deal_btc')
 				}}
 			/>
 
 			<CardCarousel>{cardCarouselList.map((item) => item)}</CardCarousel>
 
 			<AboutList
-				title={'Most Common Open Positions in Our Company'}
+				title={t('most_common_open_positions_in_our_company')}
 				texts={[
-					'Sales Manager',
-					'SMM Manager',
-					'Node JS Developer',
-					'Financial Manager',
-					'CRM Manager',
-					'Motion Designer',
-					'Graphic Designer',
-					'System Administrator'
+					t('sales_manager'),
+					t('smm_manager'),
+					t('node_js_developer'),
+					t('financial_manager'),
+					t('crm_manager'),
+					t('motion_designer'),
+					t('graphic_designer'),
+					t('system_administrator')
 				]}
-				icon={<Analyze />}
+				icon={<img src={positionsImage} alt='' />}
 			/>
 			<Button
 				variant='contained'
@@ -64,7 +65,7 @@ export const Candidates = () => {
 				href='/apply-now'
 				sx={{ backgroundColor: '#ed3432', color: 'white' }}
 			>
-				Apply now
+				{t('apply_now')}
 			</Button>
 		</section>
 	);
