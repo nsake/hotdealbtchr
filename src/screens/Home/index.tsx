@@ -66,7 +66,7 @@ export const Home = () => {
 			<Hero
 				icon={<img src={heroImage} alt='' />}
 				{...{
-					title: 'Hot Line BTS',
+					title: 'Hot Deal BTS',
 					subtitle: t('your_trusted_partner_in_cutting_edge_technology'),
 					text: t('hot_line_bts_is_a_company_with_four')
 				}}
@@ -110,7 +110,7 @@ export const Home = () => {
 
 			<CultureSection />
 
-			<CloseHero
+			{/* <CloseHero
 				texts={[
 					{
 						icon: <HomeRepairServiceIcon />,
@@ -128,7 +128,7 @@ export const Home = () => {
 						title: t('specialized_market_knowledge')
 					}
 				]}
-			/>
+			/> */}
 		</section>
 	);
 };
