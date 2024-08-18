@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { Star, People, Lock, TrendingUp, ThumbUp } from '@mui/icons-material';
 import { Fade } from 'react-awesome-reveal';
+import { useTranslation } from 'react-i18next';
 
 interface ValueItem {
 	title: string;
@@ -16,40 +17,39 @@ interface ValueItem {
 	icon: React.ReactNode;
 }
 
-const values: ValueItem[] = [
-	{
-		title: 'Customer Focus',
-		description:
-			'We place the needs and expectations of our clients at the heart of everything we do.',
-		icon: <People fontSize='large' />
-	},
-	{
-		title: 'Transparency and Integrity',
-		description:
-			'We build our relationships with clients, partners, and colleagues on transparency and trust.',
-		icon: <Lock fontSize='large' />
-	},
-	{
-		title: 'Commitment to Excellence',
-		description:
-			'We are always focused on achieving the highest results, providing services and solutions that exceed expectations.',
-		icon: <Star fontSize='large' />
-	},
-	{
-		title: 'Continuous Development',
-		description: 'We believe in the power of constant growth and learning.',
-		icon: <TrendingUp fontSize='large' />
-	},
-	{
-		title: 'Positive Thinking',
-		description: 'We approach every task with optimism and confidence.',
-		icon: <ThumbUp fontSize='large' />
-	}
-];
-
 const CultureSection: React.FC = () => {
+	const { t } = useTranslation();
+
+	const values: ValueItem[] = [
+		{
+			title: t('customer_focus'),
+			description: t('we_place_the_needs_and_expectations'),
+			icon: <People fontSize='large' />
+		},
+		{
+			title: t('transparency_and_integrity'),
+			description: t('we_build_our_relationships_with_clients'),
+			icon: <Lock fontSize='large' />
+		},
+		{
+			title: t('commitment_to_excellence'),
+			description: t('we_are_always_focused_on_achieving_the_highest'),
+			icon: <Star fontSize='large' />
+		},
+		{
+			title: t('continuous_development'),
+			description: t('we_believe_in_the_power_of_constant_growth_and_learning'),
+			icon: <TrendingUp fontSize='large' />
+		},
+		{
+			title: t('positive_thinking'),
+			description: t('we_approach_every_task_with_optimism_and_confidence'),
+			icon: <ThumbUp fontSize='large' />
+		}
+	];
+
 	return (
-		<Box sx={{ py: 8 }} id='culture'>
+		<Box sx={{ py: 8, mb: 8 }} id='culture'>
 			<Container maxWidth='lg'>
 				<Fade delay={100} duration={1000}>
 					<Typography
@@ -62,7 +62,7 @@ const CultureSection: React.FC = () => {
 							letterSpacing: '2px'
 						}}
 					>
-						Our Culture
+						{t('our_culture')}
 					</Typography>
 				</Fade>
 				<Fade delay={100} duration={1000}>
@@ -82,17 +82,13 @@ const CultureSection: React.FC = () => {
 										textAlign: 'center'
 									}}
 								>
-									Our Mission
+									{t('our_mission')}
 								</Typography>
 								<Typography
 									variant='body1'
 									sx={{ color: '#e0e0e0', textAlign: 'justify' }}
 								>
-									Our mission is to deliver innovative technological solutions
-									that transform businesses and help them reach new heights of
-									efficiency and success. We strive to make information
-									technology accessible, simple, and beneficial for every
-									client.
+									{t('our_mission_is_to_deliver_innovative_technological')}
 								</Typography>
 							</Paper>
 						</Grid>
@@ -113,17 +109,13 @@ const CultureSection: React.FC = () => {
 										textAlign: 'center'
 									}}
 								>
-									Our Vision
+									{t('our_vision')}
 								</Typography>
 								<Typography
 									variant='body1'
 									sx={{ color: '#e0e0e0', textAlign: 'justify' }}
 								>
-									We envision ourselves as a leader in the European information
-									technology market, renowned for not only meeting but exceeding
-									customer expectations. Our company will be a driving force for
-									change, helping businesses adapt to the rapidly evolving world
-									of technology and grow alongside it.
+									{t('we_envision_ourselves_as_a_leader_in')}
 								</Typography>
 							</Paper>
 						</Grid>
@@ -142,7 +134,7 @@ const CultureSection: React.FC = () => {
 										letterSpacing: '1px'
 									}}
 								>
-									Our Values
+									{t('our_values')}
 								</Typography>
 							</Grid>
 						</Fade>

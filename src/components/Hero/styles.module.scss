@@ -29,6 +29,8 @@
 
 			left: 25%;
 			transform: translate(-25%, -40%);
+
+			display: none;
 		}
 
 		img {
@@ -37,7 +39,8 @@
 			object-fit: contain;
 		}
 
-		& > svg {
+		& > svg,
+		& > img {
 			position: absolute;
 
 			z-index: 3;
@@ -71,7 +74,8 @@
 				top: unset;
 			}
 
-			& > svg {
+			& > svg,
+			& > img {
 				top: unset;
 
 				width: 480px;
@@ -97,7 +101,8 @@
 				height: 270px;
 			}
 
-			& > svg {
+			& > svg,
+			& > img {
 				width: 400px;
 				height: 270px;
 			}
@@ -122,7 +127,8 @@
 				height: 220px;
 			}
 
-			& > svg {
+			& > svg,
+			& > img {
 				width: 280px;
 				height: 220px;
 			}

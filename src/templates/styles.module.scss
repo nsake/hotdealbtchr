@@ -175,6 +175,13 @@
 	// Add additional styles for the burger button if needed
 }
 @media (min-width: 992px) {
+	.navContainer {
+		flex: 1;
+	}
+	.menu {
+		align-items: center;
+		flex: 1;
+	}
 	.closeButton {
 		display: none;
 	}
@@ -241,5 +248,13 @@
 
 	.menu a {
 		font-size: 1rem;
+	}
+}
+
+.lang {
+	margin-left: auto;
+
+	@media (max-width: 991.98px) {
+		margin: 0 auto;
 	}
 }

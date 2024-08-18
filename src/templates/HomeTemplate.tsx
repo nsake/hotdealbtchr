@@ -4,8 +4,12 @@ import styles from './styles.module.scss';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from 'components/shared/Logo';
 import useScrollToTop from 'hooks/useScrollToTop';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		try {
 			window.addEventListener('scroll', () => {
@@ -68,31 +72,35 @@ const Header = () => {
 						×
 					</button>
 					<NavLink to='/#about' onClick={() => handleNavLinkClick('about')}>
-						About us
+						{t('about_us-0')}
 					</NavLink>
 					<NavLink to='/#culture' onClick={() => handleNavLinkClick('culture')}>
-						Our Culture
+						{t('our_culture-0')}
 					</NavLink>
 					<NavLink
 						to='/job'
 						className={({ isActive }) => (isActive ? styles.active_link : '')}
 						onClick={() => setIsMenuOpen(false)}
 					>
-						Job
+						{t('job')}
 					</NavLink>
 					<NavLink
 						to='/reviews'
 						className={({ isActive }) => (isActive ? styles.active_link : '')}
 						onClick={() => setIsMenuOpen(false)}
 					>
-						Reviews
+						{t('reviews')}
 					</NavLink>
 					<NavLink
 						to='/#contacts'
 						onClick={() => handleNavLinkClick('contacts')}
 					>
-						Contacts
+						{t('contacts')}
 					</NavLink>
+
+					<div className={styles.lang}>
+						<LanguageSwitcher />
+					</div>
 				</div>
 			</div>
 		</header>
@@ -102,6 +110,8 @@ const Header = () => {
 const Footer = () => {
 	const telephone = '+380 63 484 93 17';
 	const email = 'hotdealbtchr@gmail.com';
+
+	const { t } = useTranslation();
 	return (
 		<footer className={styles.footer}>
 			<Logo />
@@ -109,7 +119,7 @@ const Footer = () => {
 			<div className={styles.common_info} id='contacts'>
 				<div className={styles.contacts_container}>
 					<div className={styles.list}>
-						Our Contacts
+						{t('our_contacts')}
 						<ul>
 							<a href={`tel:${telephone}`}>{telephone}</a>
 							<a href={`mailto:${email}`}>{email}</a>
@@ -120,15 +130,17 @@ const Footer = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								Kyiv/Lviv
+								{t('kyiv_lviv')}
 							</a>
 						</ul>
 					</div>
 
 					<div className={styles.list}>
-						Working hours
+						{t('working_hours')}
 						<ul>
-							<div style={{ textWrap: 'nowrap' }}>10:00 - 18:00 (Mon-Fri)</div>
+							<div style={{ textWrap: 'nowrap' }}>
+								10:00 - 18:00 ({t('mon_fri')})
+							</div>
 						</ul>
 					</div>
 				</div>
