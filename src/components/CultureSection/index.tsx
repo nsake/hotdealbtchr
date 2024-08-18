@@ -49,7 +49,7 @@ const CultureSection: React.FC = () => {
 	];
 
 	return (
-		<Box sx={{ py: 8, mb: 8 }} id='culture'>
+		<Box sx={{ py: 8, pb: 2 }} id='culture'>
 			<Container maxWidth='lg'>
 				<Fade delay={100} duration={1000}>
 					<Typography
