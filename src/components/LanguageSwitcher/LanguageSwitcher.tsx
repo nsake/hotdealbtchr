@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
 		<FormControl variant='outlined' size='small'>
 			<Select
 				id='language-select'
-				value={i18n.language}
+				defaultValue={i18n.language}
 				onChange={handleChange}
 				sx={{
 					backgroundColor: 'white',
