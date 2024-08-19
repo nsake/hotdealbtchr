@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from 'components/Hero';
 import { TextField, Button, Container, Grid, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 export const Request = () => {
 	const { t } = useTranslation();
+	const [inputType, setInputType] = useState<'text' | 'date'>('text');
+
 	return (
 		<section>
 			<Hero hideBackgroundImage title='Apply now' />
@@ -37,8 +39,8 @@ export const Request = () => {
 							<Grid item xs={12} sm={6}>
 								<TextField
 									fullWidth
-									label={t('date_of_birth')}
-									type='date'
+									label={t('date_of_birth-0')}
+									type={inputType}
 									InputLabelProps={{
 										shrink: true,
 										style: { color: 'white' }
@@ -58,6 +60,9 @@ export const Request = () => {
 										}
 									}}
 									variant='outlined'
+									onFocus={() => setInputType('date')}
+									onBlur={() => setInputType('text')}
+									placeholder={t('date_of_birth-0')}
 								/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
