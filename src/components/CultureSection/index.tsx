@@ -7,7 +7,13 @@ import {
 	IconButton,
 	Container
 } from '@mui/material';
-import { Star, People, Lock, TrendingUp, ThumbUp } from '@mui/icons-material';
+import {
+	Star,
+	People,
+	AccessibilityNew,
+	TrendingUp,
+	ThumbUp
+} from '@mui/icons-material';
 import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 
@@ -29,7 +35,7 @@ const CultureSection: React.FC = () => {
 		{
 			title: t('transparency_and_integrity'),
 			description: t('we_build_our_relationships_with_clients'),
-			icon: <Lock fontSize='large' />
+			icon: <AccessibilityNew fontSize='large' />
 		},
 		{
 			title: t('commitment_to_excellence'),

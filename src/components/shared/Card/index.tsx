@@ -33,8 +33,8 @@ export default function ActionAreaCard({ title, text, icon }: any) {
 					<div
 						style={{
 							background: '#242424',
-							width: '50px',
-							height: '50px',
+							minWidth: '50px',
+							minHeight: '50px',
 							display: 'flex',
 							justifyContent: 'center',
 							alignItems: 'center',
@@ -46,7 +46,10 @@ export default function ActionAreaCard({ title, text, icon }: any) {
 					</div>
 				)}
 
-				<CardContent style={{ padding: 0 }} className={styles.card_content}>
+				<CardContent
+					style={{ padding: 0, overflowY: 'auto' }}
+					className={styles.card_content}
+				>
 					<Typography
 						sx={{ color: 'white' }}
 						gutterBottom
