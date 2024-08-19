@@ -123,7 +123,7 @@ const Slide = React.memo(function (props: StackedCarouselSlideProps) {
 						</div>
 					</div>
 
-					<div className='description-text'>"{description}"</div>
+					<div className='description-text'>{description}</div>
 				</div>
 			</div>
 		</div>
