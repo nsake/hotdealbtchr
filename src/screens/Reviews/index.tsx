@@ -2,7 +2,7 @@ import Hero from 'components/Hero';
 import ResponsiveCarousel from 'components/Review';
 import { useTranslation } from 'react-i18next';
 
-import SmirnovaIcon from 'sheets/icons/smirnova.png';
+import SmirnovaIcon from 'sheets/icons/michael.png';
 import OlekiyyIcon from 'sheets/icons/oleksiy.png';
 import MaxymIcon from 'sheets/icons/maksym.png';
 import SophieIcon from 'sheets/icons/sophie.png';

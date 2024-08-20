@@ -14,7 +14,7 @@ import CoPresentIcon from '@mui/icons-material/CoPresent';
 
 import AddModeratorIcon from '@mui/icons-material/AddModerator';
 import MaksymIcon from '../../sheets/icons/maksym.png';
-import SmirnovaIcon from '../../sheets/icons/smirnova.png';
+import SmirnovaIcon from '../../sheets/icons/michael.png';
 import OleksiyIcon from '../../sheets/icons/oleksiy.png';
 
 export const Employers = () => {
