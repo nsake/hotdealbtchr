@@ -66,7 +66,7 @@ export const Home = () => {
 			<Hero
 				icon={<img src={heroImage} alt='' />}
 				{...{
-					title: 'Hot Deal BTS',
+					title: 'Hot Deal BTC',
 					subtitle: t('your_trusted_partner_in_cutting_edge_technology'),
 					text: t('hot_line_bts_is_a_company_with_four')
 				}}
