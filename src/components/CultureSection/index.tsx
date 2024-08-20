@@ -90,10 +90,7 @@ const CultureSection: React.FC = () => {
 								>
 									{t('our_mission')}
 								</Typography>
-								<Typography
-									variant='body1'
-									sx={{ color: '#e0e0e0', textAlign: 'justify' }}
-								>
+								<Typography variant='body1' sx={{ color: '#e0e0e0' }}>
 									{t('our_mission_is_to_deliver_innovative_technological')}
 								</Typography>
 							</Paper>
@@ -117,10 +114,7 @@ const CultureSection: React.FC = () => {
 								>
 									{t('our_vision')}
 								</Typography>
-								<Typography
-									variant='body1'
-									sx={{ color: '#e0e0e0', textAlign: 'justify' }}
-								>
+								<Typography variant='body1' sx={{ color: '#e0e0e0' }}>
 									{t('we_envision_ourselves_as_a_leader_in')}
 								</Typography>
 							</Paper>
