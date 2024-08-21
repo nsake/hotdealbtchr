@@ -109,7 +109,7 @@ const Header = () => {
 
 const Footer = () => {
 	const telephone = '+380 63 484 93 17';
-	const email = 'hotdealbtchr@gmail.com';
+	const email = 'info@hotdealbtc.net';
 
 	const { t } = useTranslation();
 	return (
