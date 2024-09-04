@@ -19,6 +19,7 @@ import heroImage from 'sheets/images/gruppo-di-uomini-d-affari-che-lavorano-in-u
 import servicesImage from 'sheets/images/istockphoto-1416554247-612x612.jpg';
 import aboutImage1 from 'sheets/images/depositphotos_379920438-stock-photo-group-businesspeople-working-creative-office.jpg';
 import aboutImage2 from 'sheets/images/depositphotos_164166808-stock-photo-business-people-with-desktop-computer.jpg';
+import aboutImage3 from 'sheets/images/w.jpg';
 import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
@@ -87,26 +88,30 @@ export const Home = () => {
 			/>
 			<IconCarousel items={carouselIcon} />
 			<div id='about'></div>
+
 			<About
 				title={t('about_us')}
 				texts={[
 					t(
 						'we_offer_innovative_recruitment_solutions_that_help_our_clients_attract_and_hire_the_most_talented_candidates'
-					),
-					t('our_team_consists_of_experienced_and_dedicated'),
-					t('hot_deal_btc_offers_a_wide_range_of_services')
+					)
 				]}
+				secondTitle={t('our_way')}
+				secondText={[t('we_pay_special_attention_to_understanding')]}
 				icon={<img src={aboutImage1} alt='' />}
 			/>
 			<About
 				revert
-				texts={[
-					t('we_pay_special_attention_to_understanding'),
-					t('partnering_with_hot_deal_btc_allows_your'),
-					t('contact_us_today_and_trust_your_hiring')
-				]}
+				title={t('why_we')}
+				texts={[t('why_we_text')]}
 				icon={<img src={aboutImage2} alt='' />}
 			/>
+
+			{/* <About
+				title={}
+				texts={}
+				icon={<img src={aboutImage3} alt='' />}
+			/> */}
 
 			<CultureSection />
 
